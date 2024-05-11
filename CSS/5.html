@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            /* list-style-type:square; */
+            /* list-style: none; */
+            padding: 0;
+            /* list-style-image: url('https://static.thenounproject.com/png/4778723-200.png'); */
+            list-style-image: url('./small-car.png');
+            list-style-position: inside;
+        }
+        table{
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid blue;
+            padding: 10px;
+        }
+        .box{
+     
+            /* background-color: yellow; */
+            /* overflow-y: scroll;
+            overflow-x: hidden; */
+            /* overflow: scroll; */
+        }
+        table tbody tr{
+            transition: all 1s linear;
+        }
+
+        table tbody tr:hover:nth-child(2n+1):not(:nth-child(3)){
+            background-color: green;
+            font-size: 50px;
+        }
+        table tbody tr:hover:nth-child(2n){
+            background-color: yellow;
+        }
+        table tbody tr:first-child{
+            background-color: red;
+        }
+        table tbody tr:nth-child(4){
+            color: red;
+        }
+        table tbody tr:last-child{
+            background-color: aqua;
+        }
+
+
+        table tbody tr:not(:last-child){
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    
+    <div class="box">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Seyha</td>
+                    <th>0919293912391</th>
+                    <th>Lorem ipsum dolor sit.</th>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Seyha</td>
+                    <th>0919293912391</th>
+                    <th>Lorem ipsum dolor sit.</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Seyha</td>
+                    <th>0919293912391</th>
+                    <th>Lorem ipsum dolor sit.</th>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Seyha</td>
+                    <th>0919293912391</th>
+                    <th>Lorem ipsum dolor sit.</th>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Seyha</td>
+                    <th>0919293912391</th>
+                    <th>Lorem ipsum dolor sit.</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

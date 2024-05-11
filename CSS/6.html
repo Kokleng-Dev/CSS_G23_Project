@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        ul{
+            list-style: none;
+            padding: 0px;
+            font-size: 0px;
+        }
+        li{
+            display: inline-block;
+            width: calc((100% / 4));
+            background-color: green;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: all .3s linear;
+        }
+        li a{
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        li:first-child{
+            border-top-left-radius: 15px;
+        }
+        li:last-child{
+            border-top-right-radius: 15px;
+        }
+        li:hover{
+            background-color: grey;
+            color: white;
+        }
+        .container{
+            background-color: pink;
+            height: auto;
+        }
+        .p-2{
+            padding: 12px;
+        }
+        /* p{
+            display: none;
+        } */
+        div.content{
+            margin: 0px;
+        }
+        div.content:not(:first-child){
+            display: none;
+        }
+        div.content:target{
+            display: block;
+        }
+        div.content:not(:target){
+            display: none;
+        }
+        .main-box{
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box:first-child{
+            background-color: yellow;
+            width: 20%;
+            height: 100px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .box:first-child p{
+            display: flex;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .box:last-child{
+            background-color: red;
+            width: 79%;
+            height: 100px;
+        }
+        .box:last-child{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .box-img{
+            height: 100%;
+            background-position: center;
+        }
+        .main-float{
+            width: 100%;
+            height: auto;
+            background-color: gray;
+            box-sizing: border-box;
+        }
+        .float-box{
+            float: right;
+            background-color: red;
+            border: 2px solid yellow;
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        /* .main-float p{
+            clear: both;
+        } */
+        .main-flex-box{
+            background-color: skyblue;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main-flex-box .flex-box{
+            height: 100px;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#homepage">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#news">News</a></li>
+    </ul>
+    <div class="container">
+        <div id="homepage" class="p-2 content">
+            <div class="main-box">
+                <div class="box">
+                    <p>This is my cat picture</p>
+                    <img class="box-img" src="data:image/jpeg;base64,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" alt="">
+                </div>
+                <div class="box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, id.
+                </div>
+            </div>
+            <div class="main-flex-box">
+                <div class="flex-box">Lorem, ipsum dolor.</div>
+                <div class="flex-box">Lorem, ipsum dolor.</div>
+                <div class="flex-box">Lorem, ipsum dolor.</div>
+                <div class="flex-box">Lorem, ipsum dolor.</div>
+                <div class="flex-box">Lorem, ipsum dolor.</div>
+                <div class="flex-box">Lorem, ipsum dolor.</div>
+            </div>
+            <div class="main-float">
+                <h2>Float CSS</h2>
+                <div class="float-box">Lorem, ipsum.</div>
+                <div class="float-box">Lorem ipsum dolor sit.</div>
+                <div class="float-box">Lorem ipsum dolor sit.</div>
+                <div class="float-box">Lorem ipsum dolor sit.</div>
+                <div class="float-box">Lorem ipsum dolor sit.</div>
+                <div class="float-box">Lorem ipsum dolor sit.</div>
+            </div>
+        </div>
+        <div id="about" class="p-2 content">About : lasdaksk</div>
+        <div id="contact" class="p-2 content">Contact : lasdaksk</div>
+        <div id="news" class="p-2 content">News : lasdaksk</div>
+    </div>
+
+</body>
+</html>
